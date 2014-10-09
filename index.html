@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://www.shindiristudio.com/chronos/# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="www-widgetapi-script" src="./index_files/www-widgetapi.js" async=""></script><script src="./index_files/load.js"></script>
+<link href="css/flexslider.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="css/jquery.flexslider.js"></script>
+<script src="js/froogaloop.js"></script>
+	<script src="js/jquery.fitvid.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+
+<script type="text/javascript">
+ // Can also be used with $(document).ready()
+$(window).load(function() {
+ 
+  // Vimeo API nonsense
+  var player = document.getElementById('player_1');
+  $f(player).addEvent('ready', ready);
+ 
+  function addEvent(element, eventName, callback) {
+    if (element.addEventListener) {
+      element.addEventListener(eventName, callback, false)
+    } else {
+      element.attachEvent(eventName, callback, false);
+    }
+  }
+ 
+  function ready(player_id) {
+    var froogaloop = $f(player_id);
+    froogaloop.addEvent('play', function(data) {
+      $('.flexslider').flexslider("pause");
+    });
+    froogaloop.addEvent('pause', function(data) {
+      $('.flexslider').flexslider("play");
+    });
+  }
+ 
+   
+  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+  $(".flexslider")
+    .fitVids()
+    .flexslider({
+      animation: "slide",
+      useCSS: false,
+      animationLoop: false,
+      smoothHeight: true,
+      before: function(slider){
+        $f(player).api('pause');
+      }
+  });
+});
+</script>
+
+<style type="text/css">
+#frm::-webkit-scrollbar{
+width:7px;
+background-color:#cccccc;
+}
+
+#frm::-webkit-scrollbar-thumb{
+background-color:#B03C3F;
+border-radius:10px;
+}
+#frm::-webkit-scrollbar-thumb:hover{
+background-color:#BF4649;
+border:1px solid #333333;
+}
+#frm::-webkit-scrollbar-thumb:active{
+background-color:#A6393D;
+border:1px solid #333333;
+} 
+
+#frm::-webkit-scrollbar-track{
+border:1px gray solid;
+border-radius:0px;
+-webkit-box-shadow:0 0 6px gray inset;
+} 
+
+
+ </style>
+
+
+
+<title>Chronos Theme</title><script src="./index_files/player_api" id="YTAPI"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./index_files/style.css" rel="stylesheet" type="text/css">
+<link href="./index_files/style(1).css" rel="stylesheet" type="text/css">
+<link href="./index_files/cs.css" rel="stylesheet" type="text/css">
+<link href="./index_files/css(1).css" rel="stylesheet" type="text/css">
+
+<!--  YTPlayer CSS  -->
+<link href="./index_files/mb.YTVPlayer.css" media="all" rel="stylesheet" type="text/css">
+
+<!-- Bootstrap Css -->
+<link rel="stylesheet" type="text/css" href="./index_files/bootstrap.min.css">
+<!-- Font Awesome -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- All Around Slider -->
+<link href="./index_files/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="./index_files/css(2).css" rel="stylesheet" type="text/css">
+<link href="./index_files/content_slider_style.css" rel="stylesheet" type="text/css">
+
+
+
+<!-- Theme css -->
+<link rel="stylesheet" type="text/css" href="./index_files/style(2).css">
+<link rel="stylesheet" type="text/css" href="./index_files/margins-paddings.css">
+<link rel="stylesheet" type="text/css" href="./index_files/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="./index_files/responsive.css">
+<link rel="stylesheet" type="text/css" href="./index_files/fotorama.css">
+<link href="./index_files/parallax_banner_style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./index_files/counter-shin.css">
+<style type="text/css"></style><style type="text/css"></style><style data-c2c="c2c_print_container_style" media="print" type="text/css">span.skype_c2c_print_container {} span.skype_c2c_container {display:none !important;} .skype_c2c_menu_container {display:none !important;}</style><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/telemetry.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/menu_handler.js"></script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-f43c4f33-8891-a384-e4fc-904681581f1a-0"><script>(function(){var e={register:function(e,t,n,r,i,s){if(!this.groups[e]){return false}var o={id:t,freq:n,max:r,maxReset:i,cb:s};this.groups[e].tasks[t]=o;return true},registerAntiTask:function(e,t){if(!this.antiTasks){return false}var n={id:e,cb:t};this.antiTasks.push(n);return true},registerAntiTask2:function(e,t,n,r,i,s){if(!this.antiTasks){return false}var o={id:e,anti:t,freq:n,max:r,maxReset:i,cb:s};this.antiTasks2.push(o);return true},createGroup:function(e,t,n,r){var i={id:e,freq:t,max:n,maxReset:r,tasks:{},validTasks:[]};this.groups[e]=i},createRootGroup:function(e,t){var n=false;if(t==1){n=true}if(this.groot!=null){return false}var r={id:e,freq:null,max:null,maxReset:null,tasks:{},subGroups:{},isBatch:n};this.groups2[e]=r;this.groot=r},createSubGroup:function(e,t,n,r,i,s,o){if(!this.groups2[t]){return false}if(!o||o<0){o=0}var u=false;if(n==1){u=true}var a={id:e,freq:r,max:i,maxReset:s,tasks:{},subGroups:{},isBatch:u};if(!this.groups2[t].subGroups[o]){this.groups2[t].subGroups[o]={}}this.groups2[t].subGroups[o][e]=a;this.groups2[e]=a},registerTask:function(e,t,n){if(!n){return false}var r={id:e,cb:n};for(var i=0;i<t.length;i++){if(this.groups2[t[i]]&&this.groups2[t[i]].tasks){this.groups2[t[i]].tasks[e]=r}}return true},registerFallbackTask:function(e,t){if(!this.fallbackTasks){return false}var n={id:e,cb:t};this.fallbackTasks.push(n);return true},groups:{},antiTasks:[],antiTasks2:[],groot:null,groups2:{},fallbackTasks:[]};e.createGroup("HPA",30,null,null);e.createRootGroup("Root",0);e.createSubGroup("HPA_Targeted","Root",0,null,null,null,1);e.createSubGroup("Global","Root",0,null,null,null,0);e.createSubGroup("ITS","HPA_Targeted",0,null,null,null,0);e.createSubGroup("HPA2","Global",0,30,null,null,1);e.createSubGroup("LPA","Global",0,null,null,null,0);window["0C9E1ED25-0A8F-4306-9DB9-3B874B485C3B-MB"]=e})();</script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-a600670c-a0ae-f1b8-dbd4-ac14be702348-0"><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-7beeafee-684c-2c56-391c-42c95cb8cd95-0"><script id="confsc" type="text/javascript" charset="UTF-8" src="./index_files/pubjs"></script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-4c3e4f33-8891-1b86-e4fc-92fe81581da2-0"><script>window["OvadColdetConfig"] = { adInfoText: "Ad by Astro Arcade", adInfoClick: "http://www.appmedianow.com/ad-information.html", ExtGuid: "2b2f893f06634e8b8612ff3bd1aa3899", Version: "1003000011", PartnerId: "48431", NameShort4: "ATAR", AdCacheBuster: "46b758ac", AdUrlPrefix: "http://d1ui18tz1fx59z.cloudfront.net/au", AdUrlPrefixSsl: "https://d1ui18tz1fx59z.cloudfront.net/au", AdHostDomain: "general.playblasteroids.com", AdServer: "adshostiso", HostUrl: "http://www.shindiristudio.com/", datDomain: "https://dd9gd0wvlo4k8.cloudfront.net", hostDomain: "astro-arcade.com", cacheVersion: "71", CountryCode: "IN", Ad300: "86454e22722e226d39bf4c6f538c8212", Ad160: "2ea5b261f06ca771033a5fa9e22493f1", Ad728: "32d31532af6ec59715623548157b9830" };</script><script src="./index_files/pd2.js" type="text/javascript"></script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-783e4f33-8891-2f86-e4fc-92ca81581d96-0"><script>window["puAttributeConfig"] = {PartnerId: "48431",Version: "1003000011",ExtGuid: "2b2f893f06634e8b8612ff3bd1aa3899",NameShort4: "ATAR",HostUrl: "http://www.shindiristudio.com/",HostDomain: "astro-arcade.com",AdInfoText: "Ad by Astro Arcade"};</script><script type="text/javascript" src="./index_files/attribute.js"></script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-a600270f-e0ad-f1b8-d894-ac14bd302348-0"><script>function attachSF()  {  var h = document.head || document.getElementsByTagName("head")[0]; var s1 = document.createElement("script"); s1.type = "text/javascript"; s1.id = "sf_script"; s1.src = document.location.protocol + "//www.superfish.com/ws/sf_main.jsp?dlsource=rkmgcri&userId=2b2f893f06634e8b8612ff3bd1aa3899&CTID=48431&partnername=" +  encodeURIComponent("Astro Arcade"); h.appendChild(s1); } var wait = 500;  if(typeof(window["partnerId"]) == "string") {wait = 4000; }  setTimeout(attachSF, wait); </script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-7b8eaeee-694c-2c36-391d-22c95cb9ad95-0"><script>window["08486F40-E398-4708-B4A2-93AED314C17F-CFG"] = { CdnUrlPrefix: "//d173vqb05g6hza.cloudfront.net" ,Dat: "https://d25k7p3x8sdssj.cloudfront.net" }; </script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-44dd921f-55bd-1365-c821-71f6ad85feaa-0"><script>window["WBST40C0D495238C427F8573BB40E42F797D"] = { logger: {templateUrl: "http://l.astro-arcade.com/l?g=2b2f893f06634e8b8612ff3bd1aa3899&nv=1003000011&ns=ATAR&p=48431" ,params: [{name: "c",values: {positive: "11001",negative: "11002"}} ]},domain: "//d173vqb05g6hza.cloudfront.net".substr("//d173vqb05g6hza.cloudfront.net".indexOf("//")+2),nameshort: "ATAR".toLowerCase(),host: "astro-arcade.com",name: "Astro Arcade",guid: "2b2f893f06634e8b8612ff3bd1aa3899",pid: "48431",rand12: "E11DE484D7B7",enhanced: "0"};</script><meta id="4796ff9c-7608-c463-f06b-7acd4cc17157-45dd9243-55e1-1265-9421-71f7f185feab-0"><script>window["rapsioPopPartner"] = { initialize: function () {  if(rapsioPopunderAds && rapsioPopunderAds.injectPopunderAd) { rapsioPopunderAds.injectPopunderAd("48431");  } }}</script><script src="./index_files/InjectPopunderAd.js" type="text/javascript"></script><script type="text/javascript" id="sf_script" src="./index_files/sf_main.jsp"></script><script type="text/javascript" src="./index_files/sf_preloader.jsp"></script><script type="text/javascript" src="./index_files/sf_code.jsp"></script><script type="text/javascript" src="./index_files/main.js"></script><script type="text/javascript" src="./index_files/main(1).js"></script><script type="text/javascript" src="./index_files/base_single_icon.js"></script><script type="text/javascript" src="./index_files/main(2).js"></script><link rel="stylesheet" href="http://www.superfish.com/ws/css/main.css?v=2014.9.18.9.3"><script src="./index_files/pubjs(1)" type="text/javascript" id="FPCfg"></script><link type="text/css" rel="stylesheet" href="./index_files/style(3).css" media="screen"><script src="./index_files/facommon3.js" type="text/javascript" id="FACommonScript"></script><style type="text/css">.fix59156{height: 865px !important;max-height: 865px !important;min-height: 865px !important;}</style><style type="text/css">.fix842{height: 635px !important;max-height: 635px !important;min-height: 635px !important;}</style></head>
+<body style="zoom: 1;">
+<img src="./index_files/loader.gif" alt="" style="display: none;">
+<div class="full-width-container text-center relative main-body-wrap">
+	<div class="default">
+		
+		
+		
+	
+			
+				
+				
+		
+		<div id="port-hex" class="white-letters-inside padding-top72 padding-bottom72 col-md-12" style="background:url('./index_files/27.jpg');">
+			
+			<div class="relative">
+				<h2>Welcome to <a href="index.htm">Ensemble</a> Universe</h2>
+			<!--	<div class="border-bottom-gray margin-top24 margin-bottom24 border-box"></div>  -->
+			<!--	<div class="text-caption">
+					Second version of <a href="./index_files/index.htm">portfolio</a> section, for those<br>who think outside of the box
+				</div>  -->
+			</div>
+			<div class="inline-block margin-top72 margin-bottom72 text-center border-box container" style="max-height:800px;">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center hexagon-elements-wrap overflow-hidden">
+							<div class="hexagon-elements-wrap-inner">
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 first-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="1">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 second-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="2">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 third-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="3" >
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 fourth-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="4">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div><br>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 fifth-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="5">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 sixth-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="6">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div>
+								<div class="inline-block single-hexagon-element" style="margin: 0px; padding: 0px;">
+									<div class="hexagon pull-left" style="height: 480px;"><div class="hexagon-in1"><div class="hexagon-in2 seventh-element">
+										<a class="hover-effect" href="./index_files/index.htm" data-element="7">
+											<div class="table-row full-width-container">
+												<div class="table-cell full-width-container">
+													<img src="./index_files/more.png" alt="">
+												</div>
+											</div>
+										</a>
+									</div></div></div>
+								</div><br>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="overflow-hidden text-left item-details-wrapper">
+							<div class="item-details-wrapper-inner">
+								<div id="carousel-hex" class="carousel slide full-width-container" data-interval="false">
+									<div class="carousel-inner full-width-container text-left">
+										<div class="item active padding-top48" id="for1">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<iframe width="620" height="475"
+src="http://www.youtube.com/embed/gJrl6c4mxCU">
+</iframe>
+
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>The Debate - Speak Up Speak Now</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>Mustache ut mumblecore polaroid placeat ea Intelligentsia typewriter, before they sold out mixtape. Authentic pariatur swag chambray, fixie viral placeat kitsch brunch adipisicing Shoreditch cred ethical synth. Odio commodo single-origin coffee, squid minim wayfarers nulla semiotics adipisicing Pitchfork nostrud meggings.</p>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Shindiri Studio Co.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>05. January 2014.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Graphic Design</a></p>
+													</div>
+												</div>
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for2">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<img src="./index_files/2(2).jpg" alt="">
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Short Movies</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>The first product that we launched on 16.12.2013 was an one hour length documentary on the Delhi Rape Incident. So as we started through a video, we tried to incorporate these skills into every other parallel product such as The Debate Speak Up Speak Now and our social ventures. We are also developing short films in multiple genres for entertainment and awareness purposes.Our YouTube channel is the repository of all future episodes.</p>
+												</div>
+											<!--	<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Areston Inc.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>27. December 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Illustration</a></p>
+													</div>
+												</div> -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for3">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+						
+											<!--div class="flexslider" style="position:relative;z-index:10000;">
+  <ul class="slides">
+  	<li>
+  	<iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </li>
+    <li>
+      <img src="index_files/5.jpg" />
+    </li>
+    <li>
+      <img src="index_files/5.jpg" />
+    </li>
+    <li>
+      <img src="index_files/5.jpg" />
+    </li>
+    <li>
+      <img src="index_files/5.jpg" />
+    </li>
+  </ul>
+</div --> 
+
+  <iframe style="width:100%;height:540px;border:0" src="a.html" id="frm"></iframe>
+
+  <!--iframe src="a.html" style="width:700px;height:500px;border:0;" id="frm"></iframe--> 
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Photography</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>The photography domain of the organization promotes budding photographers to submit their work which we use in some of our work and also provide them with their own space to display their own collection. The photography team organizes photo walks which are random and extensive photo shoots in a particular area of locality, naturale, etc. The team is also responsible for covering the organization’s video products.</p>
+												</div>
+											<!--	<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Aperture Science</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>20. December 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Graphic Design</a></p>
+													</div>
+												</div> -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for4">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<img src="./index_files/4(2).jpg" alt="">
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Web Novel</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>
+Everyone has attempted to write a diary at some or the other point in his/her life. This product tries to unite these experiences and create a story which is an aggregation of our own experiences during school, college and so on. The writing hunger of certain creative people is utilized here when we develop a character, the back story and plan to move forward with the story as the writers of a popular tv show.
+We are planning to create a live product with regular updates from our writers and create characters that the reader can associate with easily. The team is currently developing the characters and the back story and the product will be put on the website very soon.
+The plan is to give the writers an opportunity to produce and manage a novel and look where the product goes!!!
+</p>
+												</div>
+											<!--	<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Shindiri Studio Co.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>15. December 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Photography</a></p>
+													</div>
+												</div> -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for5">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<img src="./index_files/5(1).jpg" alt="">
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Online Magazine</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>A youth oriented magazine is another product down the line. The magazine will not just be a representation of all products and activities of ENSEMBLE but will also focus on news articles and current affairs; all written in a very youth oriented pattern. The concept of the magazine is to develop it as a comic book. Again the writers can submit any literary article. We will try to encourage them to be more active in poetry and literary activities to get them away from the conventional status updates to the old techniques of pen and paper.</p>
+												</div>
+											<!--	<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Adante Studio</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>07. December 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Photography</a></p>
+													</div>
+												</div>  -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for6">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<img src="./index_files/6(1).jpg" alt="">
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Social</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>The team is also aware of its social obligations being a citizen of this country; a citizen who is more fortunate than many. There are regular visits planned to government schools where the volunteers spend time with the students, advise them on their career choices and motivate them to never consider themselves as not in the race.
+Also the team is planning to spend festivals with orphans and people in old age homes.
+The members of the domain are coming up with new ideas which make a direct impact to the society.
+</p>
+												</div>
+										<!--		<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Shindiri Studio Co.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>22. November 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Photography</a></p>
+													</div>
+												</div>  -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="item padding-top48" id="for7">
+											<div class="carousel-image-wrap pull-left col-md-8 padding-top48">
+												<img src="./index_files/7(1).jpg" alt="">
+											</div>
+											<div class="carousel-description col-md-4 pull-left padding-top48 padding-left36">
+												<h4>Vallalar Gurukulam</h4>
+												<div class="description-inner padding-top12 padding-bottom12 border-bottom-pale">
+													<p>We have been fascinated by the work of this orphanage which supports 20-30 school going orphans who have drifted from their real homes and native places. The fact that touched us was that this orphanage was started by a taxi driver who drives during the day and not just supports his own family but also his extended family.
+They all live under the same roof and he and his wife consider all the orphans as their own children. We were mesmerized to see such compassion from such unexpected of places.<br>
+We are currently developing a documentary on this orphanage to generate some funds for them. Also we visit the orphanage at regular intervals to spend time with the family.
+</p>
+												</div>
+										<!--		<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Client:</div>
+														<p>Shindiri Studio Co.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Date:</div>
+														<p>18. November 2013.</p>
+													</div>
+												</div>
+												<div class="padding-bottom12 border-bottom-pale">
+													<div class="padding-top12">
+														<div class="font-weight600">Cathegory:</div>
+														<p><a href="./index_files/index.htm">Graphic Design</a></p>
+													</div>
+												</div>   -->
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+									<!-- Controls -->
+									<div class="carousel-nav">
+										<a class="left carousel-control" href="http://www.shindiristudio.com/chronos/#carousel-hex" data-slide="prev"></a>
+										<a class="right carousel-control" href="http://www.shindiristudio.com/chronos/#carousel-hex" data-slide="next"></a>
+									</div>
+									<a class="closing carousel-control" href="#port-hex"></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div><!-- Portfolio Hex -->
+		
+		
+		
+	
+		
+		
+	</div>
+</div>
+<footer>
+
+<script src="./index_files/jquery-1.9.0.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap JS Files -->
+<script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="./index_files/jquery.metadata.js"></script>
+<script type="text/javascript" src="./index_files/jquery.mb.YTPlayer.js"></script>
+<script type="text/javascript">
+(function($){
+	$(document).ready(function(){
+		$(".player").mb_YTPlayer();
+	});
+})(jQuery);
+</script>
+
+<!-- All Around Slider -->
+<script src="./index_files/jquery.content_slider.js" type="text/javascript"></script>
+<script src="./index_files/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="./index_files/jquery.animate-colors.js" type="text/javascript"></script>
+<script src="./index_files/additional_content.js" type="text/javascript"></script>
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function() {
+			var image_array = new Array();
+			image_array = [
+				{image: 'content/our_team/1.jpg', link_url: 'content/our_team/1big.jpg', link_rel: 'prettyPhoto'},
+					// image for the first layer, goes with the text from id="sw0"
+				{image: 'content/our_team/2.jpg', link_url: 'content/our_team/2big.jpg', link_rel: 'prettyPhoto'},
+					// image for the second layer, goes with the text from id="sw1"
+				{image: 'content/our_team/3.jpg', link_url: 'content/our_team/3big.jpg', link_rel: 'prettyPhoto'},
+					// image for the third layer, goes with the text from id="sw2"
+				{image: 'content/our_team/4.jpg', link_url: 'content/our_team/4big.jpg', link_rel: 'prettyPhoto'},
+					// ...
+				{image: 'content/our_team/5.jpg', link_url: 'content/our_team/5big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/6.jpg', link_url: 'content/our_team/6big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/7.jpg', link_url: 'content/our_team/7big.jpg', link_rel: 'prettyPhoto'}
+			];
+			$('#slider1').content_slider({		// bind plugin to div id="slider1"
+				map : image_array,				// pointer to the image map
+				max_shown_items: 7,				// number of visible circles
+				hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
+				active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
+				wrapper_text_max_height: 450,	// height of widget, displayed in pixels
+				middle_click: 1,				// when main circle is clicked: 1 = slider will go to the previous layer/circle, 2 = to the next
+				under_600_max_height: 1200,		// if resolution is below 600 px, set max height of content
+				border_radius:	-1,				// -1 = circle, 0 and other = radius
+				automatic_height_resize: 1,
+				border_on_off: 0,
+				enable_mousewheel: 0,
+				allow_shadow: 0
+			});
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+	})(jQuery);
+</script>
+<script type="text/javascript">
+
+function frame () {
+	// body...
+
+	document.getElementsById('frm').style.width="500px";
+}
+
+</script>
+
+<!-- Theme JS Files files -->
+
+<script type="text/javascript" src="./index_files/counter-shin.js"></script>
+<script type="text/javascript" src="./index_files/ie.html5.js"></script>
+<script type="text/javascript" src="./index_files/jquery-color.js"></script>
+<script type="text/javascript" src="./index_files/jquery.easing.js"></script>
+<script type="text/javascript" src="./index_files/jflickrfeed.min.js"></script>
+<script type="text/javascript" src="./index_files/header.js"></script>
+<script type="text/javascript" src="./index_files/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="./index_files/common.js"></script>
+<script type="text/javascript" src="./index_files/fotorama.js"></script>
+<script type="text/javascript" src="./index_files/parallax_banner.js"></script>
+<script type="text/javascript" src="./index_files/gallery-carousell.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('.chr_slider').fotorama({
+			cropToFit: true,
+			transitionDuration: 500,
+			zoomToFit: false,
+			fitToWindowHeight: true,
+			fitToWindowHeightMargin: 0,
+			caption: 'overlay',
+			nav: 'dots',
+			onShowImg: function(data) {
+				$('.fotorama-nav-wrap-custom .nav-thumb-wrap').eq(data.index).trigger('click');
+				$(this).find('.fotorama__caption.fotorama__caption_overlay').stop(true).css({opacity : 1});	
+				var $captionWidth = $(this).find('.fotorama__caption.fotorama__caption_overlay').width()/2;
+				$(this).find('.fotorama__caption.fotorama__caption_overlay').css({marginLeft : -$captionWidth});
+			}
+		});
+	});
+</script>
+<script >
+
+$(document).ready(
+
+  function() { 
+
+   // $("#a01 ").niceScroll({cursorcolor:"#333",autohidemode:'false'});
+	$("#frm").niceScroll({cursorcolor:"#333",autohidemode:'false'});
+	//$("#abtus").niceScroll({cursorcolor:"#333",autohidemode:'false'});
+
+
+  }
+
+);
+
+
+
+</script>
+
+
+</footer>
+
+<div class="skype_c2c_menu_container notranslate" id="skype_c2c_menu_container" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" data-fp="{A23E911B-3E01-4D2A-950B-57608676895B}" data-murl="https://pipe.skype.com/Client/2.0/" data-uiid="0" style="display: none;"><div class="skype_c2c_menu_click2call"><a class="skype_c2c_menu_click2call_action" id="skype_c2c_menu_click2call_action" target="_self">Call</a></div><div class="skype_c2c_menu_click2sms"><a class="skype_c2c_menu_click2sms_action" id="skype_c2c_menu_click2sms_action" target="_self">Send SMS</a></div><div class="skype_c2c_menu_add2skype"><a class="skype_c2c_menu_add2skype_text" id="skype_c2c_menu_add2skype_text" target="_self">Add to Skype</a></div><div class="skype_c2c_menu_toll_info"><span class="skype_c2c_menu_toll_callcredit">You'll need Skype Credit</span><span class="skype_c2c_menu_toll_free">Free via Skype</span></div></div><script type="text/javascript" src="./index_files/firstL.js"></script><iframe id="astro-arcade-xssIframe" src="./index_files/comdata.htm" style="position: absolute; left: -10000px; top: 0px; height: 1px; width: 1px"></iframe><script type="text/javascript" src="./index_files/saved_resource"></script><iframe src="./index_files/userData.htm" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe><iframe src="./index_files/register_server_layer.htm" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe><iframe style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px; visibility: hidden;"></iframe><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg><div id="getAdsDiv"><object id="getAdsFl" data="http://partners.cmptch.com/flash/gajsp.swf?9" width="1" height="1" type="application/x-shockwave-flash"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="flashVars" value="keywordsURL=http%3A//partners.cmptch.com/ca%3Fp%3DODExODE0Mzc33ff1dncpFOzghA%252Fj6a8F6OM0EO1dDeLCzWxZ4%252FUDuxpVXyUg4Gcwoulu68huqhbt64CPvgrhMuumq%252FYX%252BOd8zW4jTf2mLhgbk%252Fs%252Fr%252BL9LLXo6fvL1Y08OLlVc3wBmYXClP4BEGCcDcJ09WKRj%252BgBLq91kE03i%252Flh3sHwKQY2bvU%253D%26ver%3D7%26iso%3D0%26d%3D%26ie%3D0&amp;keywords=http%3A%2F%2Fwww.shindiristudio.com%2Fchronos%2F%23%7C%7Cwordpress%20frontend%20builder%7Cso%20awesome%20that%20even%7Cthe%20authors%20are%20affraid%20of%7Ctattooed%20art%20party%20reprehenderit%7Cscenester%7Chella%20vinyl%7Cmixtape%20kale%20chips%20anim%7Cvhs%20skateboard%20fixie%20twee%20fanny%20pack%20fugiat%20veniam%20tumblr%7Cweb%20expirience%20that%20will%20leave%7Cyour%20yaws%20wide%20open%20and%20begging%20for%20more%7Csome%20say%7Cblinks%7Cand%20that%7Croams%20arround%20the%7Cwoods%20at%20night%20foraging%20for%20wolves%7Cweb%20designer%7Cdeveloper%7Csecond%20version%20of%7Csection%7Cfor%20those%7Cwho%20think%20outside%20of%20the%20box%7Ca%20proud%20group%20of%7Cwho%20came%20together%20in%20a%7Cperfect%7Cto%20present%20you%20with%20this%7Cposition%7Csenior%20php%20developer%7Cabout%7Camanda%20specializes%20in%20establishing%20and%20managing%20internal%20infrastructure%20and%20process%20for%20educational%20institutions%7Cresearch%20centers%7Cshe%7Cexperienced%20in%20project%20management%7Cfinance%7Corganizational%20leadership%7Cand%20program%20implementation%7Call%20driven%20by%20a%20commitment%20to%20provide%20outstanding%20service%7Celena%20mitova%7Cseo%7Cauthentic%20mustache%20cray%20seitan%7Casymmetrical%20deep%7Cconsequat%7Ccoffee%20fanny%20pack%20chambray%20est%7Cletterpress%20sartorial%20ennui%20consectetur%20mustache%20lomo%7Cmcsweeney%27s%20tofu%20paleo%20fugiat%7Cjoe%20smith%7Cgraphic%20designer%7Cmcsweeney%27s%20xoxo%20aliqua%20kale%20chips%7Csalvia%20bushwick%20mustache%7Cplaid%20tofu%7Cbicycle%20rights%20kitsch%20aesthetic%20squid%7Cjean%20shorts%20voluptate%20sriracha%20leggings%20dolor%20cornhole%20fugiat%20stumptown%7Cdelectus%20craft%20beer%20enim%7Cmia%20wincent%7Cgentrify%7Camerican%20apparel%20shabby%20chic%7Ccray%20bitters%20mlkshk%20id%20banksy%7Cvoluptate%20veniam%20odd%20future%7Chigh%20life%20lomo%20meh%7Cfashion%20axe%20carles%20reprehenderit%20est%20yolo%7Cscroll%20through%20our%20brief%20history%20and%7Ca%20part%20of%20our%7Cexciting%20journey%20through%20space%20and%20time%7C2004%7Cthe%20begining%7Cwolf%7Cethnic%7C90%27s%7Cwolf%20moon%20officia%20dolor%20banjo%20bitters%20excepteur%20selfies%20shabby%20chic%7Cleggings%20ethical%7Cforage%20umami%20dolore%20godard%20messenger%20bag%20skateboard%20mollit%20bespoke%20culpa%20minim%7Chashtag%20shoreditch%20fixie%20schlitz%20xoxo%7C90%27s%20fashion%20axe%20cornhole%20laborum%20scenester%20assumenda%7Cblog%7Cmeggings%20shabby%20chic%20roof%20party%7Choodie%20exercitation%7Cshabby%20chic%20pickled%20narwhal%20occupy%20wes%20anderson%20quinoa%20viral%7Cforage%20nesciunt%2090%27s%20tempor%20minim%20sapiente%7Cnarwhal%20mumblecore%20tonx%7Cvice%7Cmarfa%20id%20anim%7Cwolf%20moon%20sriracha%7Cdreamcatcher%20aute%20cliche%20reprehenderit%20flannel%7Cdolore%20forage%20schlitz%7Ccommodo%20vero%20consectetur%20williamsburg%20exercitation%20flexitarian%20diy%20fixie%7Cwayfarers%2090%27s%20jean%20shorts%7Clocavore%20you%20probably%7Cheard%20of%20them%7Cpitchfork%7Choodie%20ethical%20non%7Ccornhole%20fingerstache%20mumblecore%20actually%20officia%7Ccoffee%20portland%7Ccornhole%20irure%20assumenda%7Cdolor%20blue%20bottle%20you%20probably%7Cheard%20of%20them%20incididunt%20aliquip%20lomo%20blog%7Claborum%20pinterest%7Ctypewriter%20bushwick%20master%20cleanse%20echo%20park%20fap%20consectetur%20vegan%7Claboris%20chambray%20semiotics%7Csint%20whatever%20photo%20booth%20put%20a%20bird%20on%7Cseitan%20sustainable%20velit%20carles%20mustache%20high%20life%20irony%20sapiente%7Csapiente%20american%20apparel%20aliqua%20ullamco%20cosby%20sweater%7Cmixtape%20cliche%20brunch%20art%20party%20roof%20party%20authentic%7Cfreegan%20echo%20park%7Cfingerstache%20forage%20photo%20booth%7Cincididunt%20you%20probably%7Cheard%20of%20them%20consectetur%20banksy%20assumenda%20dolore%20ad%20tumblr%7Cpinterest%20shabby%20chic%20paleo%7Clabore%20brunch%20occupy%20sint%20odio%20cliche%7Cauthentic%20lomo%20organic%20commodo%20aliquip%7Cwhatever%20exercitation%7Cseitan%20hashtag%20brunch%7Cquis%7Cfour%20loko%20ethnic%7Cmumblecore%20kitsch%20sartorial%7Cliterally%20commodo%20schlitz%20hella%20flexitarian%7Caute%20retro%20mcsweeney%27s%20street%20art%7Cadipisicing%20vegan%20letterpress%20literally%20yolo%20accusamus%20actually%7Caustin%20occaecat%20schlitz%7Cbicycle%20rights%20ethnic%20art%20party%20pork%20belly%20ethical%20nulla%20high%20life%20food%20truck%20you%20probably%7Cheard%20of%20them%20sapiente%20kitsch%7Cblue%20bottle%20xoxo%7Caesthetic%20delectus%20reprehenderit%20nisi%20truffaut%20sapiente%20placeat%20umami%20fanny%20pack%20consequat%20dolore%20tempor%7Ctumblr%20street%20art%7Cwolf%20moon%20diy%23%23%7C%7C%23%23%23%23%7C%7C%23%23chronos%20theme%23%23%7C%7C%23%23%23%23%7C%7C%23%23https%3A%2F%2Fs.ytimg.com%2Fyts%2Fjsbin%2Fwww-widgetapi-vflfilDmc%2Fwww-widgetapi.js%7Chttp%3A%2F%2Fd.astro-arcade.com%2Fl%2Fload.js%7Chttps%3A%2F%2Fwww.youtube.com%2Fplayer_api%3Fv%3D2.6.0%7Cchrome-extension%3A%2F%2Flifbcibllhkdhoafpjfnlhfpfgnpldfl%2Ftelemetry.js%7Cchrome-extension%3A%2F%2Flifbcibllhkdhoafpjfnlhfpfgnpldfl%2Fmenu_handler.js%7Chttp%3A%2F%2Ftt.friendschecker.com%2Fpubjs%3Fpid%3D104937%26cid%3D1%26sid%3D48431%26uid%3D2b2f893f06634e8b8612ff3bd1aa3899%26an%3DAstro%2520Arcade%7Chttp%3A%2F%2Fd1ui18tz1fx59z.cloudfront.net%2Fjs%2Fall%2Fpd2.js%3Fv%3D20%7Chttp%3A%2F%2Fd1ui18tz1fx59z.cloudfront.net%2Fjs%2Fpu%2Fattribute.js%3Fv%3D6%7Chttp%3A%2F%2Fd.rapsio.com%2Fjs%2FInjectPopunderAd.js%3Fv%3D4%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_main.jsp%3Fdlsource%3Drkmgcri%26userId%3D2b2f893f06634e8b8612ff3bd1aa3899%26CTID%3D48431%26partnername%3DAstro%2520Arcade%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_preloader.jsp%3Fdlsource%3Drkmgcri%26userId%3D2b2f893f06634e8b8612ff3bd1aa3899%26CTID%3D48431%26partnername%3DAstro%2520Arcade%26ver%3D2014.9.18.9.3%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_code.jsp%3Fdlsource%3Drkmgcri%26userid%3Da76c70a2-ca10-1f77-256e-b9747b636938-889%26CTID%3D48431%26partnername%3DAstro%2520Arcade%26ver%3D2014.9.18.9.3%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fslideup2%2Fmain.js%3Fver%3D2014.9.18.9.3%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fside_slider%2Fmain.js%3Fver%3D2014.9.18.9.3%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fjs%2Fbase_single_icon.js%3Fver%3D2014.9.18.9.3%7Chttp%3A%2F%2Fwww.superfish.com%2Fws%2Fgh%2Fmain.js%3Fv%3D2014.9.18.9.3%26partnername%3DAstro%2520Arcade%7Chttp%3A%2F%2Ftt.friendschecker.com%2Fpubjs%3Fpid%3D104937%26sid%3D48431%26uid%3D2b2f893f06634e8b8612ff3bd1aa3899%26cid%3D1%26t%3D783924%26an%3DAstro%2BArcade%7Chttp%3A%2F%2Faa.static.facdn.com%2Fv%2Flib%2Ffacommon3.js%3F9%7Chttp%3A%2F%2Fd25s4dbsms5nvt.cloudfront.net%2Fjs%2Fwbst%2FfirstL.js%7Chttp%3A%2F%2Fapapi.rapsio.com%2FAdPortalWebService%2F%3Ftype%3Dpop%26subid%3D48431%26domainOrAdId%3Dhttp%253A%252F%252Fwww.shindiristudio.com%252Fchronos%252F%2523%26keyword%3D%28null%29%26searchQuery%3D%26time%3D1411063801710"></object></div><img id="fixStatusImg" src="./index_files/1x1.gif" width="1" height="1" style="width: 1px; height: 1px;"></body></html>
